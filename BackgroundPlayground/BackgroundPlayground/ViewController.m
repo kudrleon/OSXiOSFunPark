@@ -78,6 +78,14 @@
     [self.centralManager connectPeripheral:peripheral options:nil];
 }
 
+//
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    NSLog(@"didDisconnectPeripheral fired");
+    [self sendAlarm:@"Disconnect"];
+}
+
+
 #pragma mark - CBPeripheralDelegate
 
 // Invoked when you discover the peripheral's available services.
@@ -88,7 +96,6 @@
         [peripheral discoverCharacteristics:nil forService:service];
     }
 }
-
 // Invoked when you discover the characteristics of a specified service.
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
 {
@@ -118,7 +125,6 @@
         }
     }
 }
-
 // Invoked when you retrieve a specified characteristic's value, or when the peripheral device notifies your app that the characteristic's value has changed.
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
@@ -161,41 +167,32 @@ static int count=0;
     if( (characteristic.value)  || !error ) {   // 4
         self.heartRate = bpm;
         self.heartRateBPM.text = [NSString stringWithFormat:@"%i bpm", bpm];
-        count += 1;
-        if( count % 10 == 1 )
+        if( ++count % 10 == 1 ) {
             NSLog(@"Rate: %i bpm (%i)", bpm, count);
-        if (count == 12) {
-            NSLog(@"Firing alarm");
-            [self sendAlarm];
-            NSLog(@"Did fire alarm");
         }
     }
     return;
 }
-
-- (void)sendAlarm
+// This is a sampe method to send some type of alarm to another app; see callback in the main AppDelegate.
+- (void)sendAlarm:(NSString *) alarmType
 {
     UIApplication* app = [UIApplication sharedApplication];
-    NSArray*    oldNotifications = [app scheduledLocalNotifications];
-    // Clear out the old notification before scheduling a new one.
-    if ([oldNotifications count] > 0)
-        [app cancelAllLocalNotifications];
-    // Create a new notification.
-    UILocalNotification* alarm = [[UILocalNotification alloc] init];
-    alarm.repeatInterval = 0;
-    alarm.alertBody = @"12 measures";
-    alarm.alertAction = @"12M";
-    [app presentLocalNotificationNow:alarm];
     UIApplicationState applicationState = app.applicationState;
     if (applicationState == UIApplicationStateBackground) {
+        NSArray*    oldNotifications = [app scheduledLocalNotifications];
+        if ([oldNotifications count] > 0)
+            [app cancelAllLocalNotifications];
+        
+        UILocalNotification* alarm = [[UILocalNotification alloc] init];
+        alarm.repeatInterval = 0;
+        alarm.alertBody = [NSString stringWithFormat:@"Alarm: %@", alarmType];
+        alarm.alertAction = alarmType;
         [app presentLocalNotificationNow:alarm];
     }
     else {
-        NSURL *myURL = [NSURL URLWithString:@"CustomSchemePlayground://from_ticker"];
-        [[UIApplication sharedApplication] openURL:myURL];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"CustomSchemePlayground://%@", alarmType]]];
     }
 }
-
 // Instance method to get the manufacturer name of the device
 - (void) getManufacturerName:(CBCharacteristic *)characteristic
 {

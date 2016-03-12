@@ -29,15 +29,14 @@
     NSLog(@"Received notification: %@", notification.alertBody);
     [NSTimer scheduledTimerWithTimeInterval: 0.1
                                      target: self
-                                   selector: @selector(openCustomUrl)
-                                   userInfo: NULL
+                                   selector: @selector(openCustomUrlFromTimer:)
+                                   userInfo: notification.alertAction
                                     repeats: NO];
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"CustomSchemePlayground://note_from_alert"]];
 }
 
-- (void) openCustomUrl {
+- (void) openCustomUrlFromTimer:(NSTimer *)timer {
     NSLog(@"Fire URL NOW");
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"CustomSchemePlayground://note_from_alert"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"CustomSchemePlayground://note_from_%@", (NSString*)timer.userInfo]]];
 }
 
 // Called to tell the delegate the types of local and remote notifications that can be used to get the user’s attention.
