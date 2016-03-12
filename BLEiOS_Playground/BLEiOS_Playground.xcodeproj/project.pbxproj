@@ -13,8 +13,6 @@
 		B315A2D11C935137005AA96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B315A2CF1C935137005AA96B /* Main.storyboard */; };
 		B315A2D31C935137005AA96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B315A2D21C935137005AA96B /* Assets.xcassets */; };
 		B315A2D61C935137005AA96B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B315A2D41C935137005AA96B /* LaunchScreen.storyboard */; };
-		B315A2E11C935137005AA96B /* BackgroundPlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B315A2E01C935137005AA96B /* BackgroundPlaygroundTests.m */; };
-		B315A2EC1C935137005AA96B /* BackgroundPlaygroundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B315A2EB1C935137005AA96B /* BackgroundPlaygroundUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B315A2C31C935137005AA96B /* BackgroundPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B315A2C31C935137005AA96B /* BLEiOS_Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEiOS_Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B315A2C71C935137005AA96B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B315A2C91C935137005AA96B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B315A2CA1C935137005AA96B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,12 +43,8 @@
 		B315A2D21C935137005AA96B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B315A2D51C935137005AA96B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B315A2D71C935137005AA96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B315A2DC1C935137005AA96B /* BackgroundPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B315A2E01C935137005AA96B /* BackgroundPlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundPlaygroundTests.m; sourceTree = "<group>"; };
-		B315A2E21C935137005AA96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B315A2E71C935137005AA96B /* BackgroundPlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundPlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B315A2EB1C935137005AA96B /* BackgroundPlaygroundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundPlaygroundUITests.m; sourceTree = "<group>"; };
-		B315A2ED1C935137005AA96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B315A2DC1C935137005AA96B /* BLEiOS_Playground.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEiOS_Playground.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B315A2E71C935137005AA96B /* BLEiOS_Playground.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEiOS_Playground.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +75,7 @@
 		B315A2BA1C935137005AA96B = {
 			isa = PBXGroup;
 			children = (
-				B315A2C51C935137005AA96B /* BackgroundPlayground */,
-				B315A2DF1C935137005AA96B /* BackgroundPlaygroundTests */,
-				B315A2EA1C935137005AA96B /* BackgroundPlaygroundUITests */,
+				B315A2C51C935137005AA96B /* BLEiOS_Playground */,
 				B315A2C41C935137005AA96B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +83,14 @@
 		B315A2C41C935137005AA96B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B315A2C31C935137005AA96B /* BackgroundPlayground.app */,
-				B315A2DC1C935137005AA96B /* BackgroundPlaygroundTests.xctest */,
-				B315A2E71C935137005AA96B /* BackgroundPlaygroundUITests.xctest */,
+				B315A2C31C935137005AA96B /* BLEiOS_Playground.app */,
+				B315A2DC1C935137005AA96B /* BLEiOS_Playground.xctest */,
+				B315A2E71C935137005AA96B /* BLEiOS_Playground.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B315A2C51C935137005AA96B /* BackgroundPlayground */ = {
+		B315A2C51C935137005AA96B /* BLEiOS_Playground */ = {
 			isa = PBXGroup;
 			children = (
 				B315A2C91C935137005AA96B /* AppDelegate.h */,
@@ -111,7 +103,7 @@
 				B315A2D71C935137005AA96B /* Info.plist */,
 				B315A2C61C935137005AA96B /* Supporting Files */,
 			);
-			path = BackgroundPlayground;
+			path = BLEiOS_Playground;
 			sourceTree = "<group>";
 		};
 		B315A2C61C935137005AA96B /* Supporting Files */ = {
@@ -122,30 +114,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B315A2DF1C935137005AA96B /* BackgroundPlaygroundTests */ = {
-			isa = PBXGroup;
-			children = (
-				B315A2E01C935137005AA96B /* BackgroundPlaygroundTests.m */,
-				B315A2E21C935137005AA96B /* Info.plist */,
-			);
-			path = BackgroundPlaygroundTests;
-			sourceTree = "<group>";
-		};
-		B315A2EA1C935137005AA96B /* BackgroundPlaygroundUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B315A2EB1C935137005AA96B /* BackgroundPlaygroundUITests.m */,
-				B315A2ED1C935137005AA96B /* Info.plist */,
-			);
-			path = BackgroundPlaygroundUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B315A2C21C935137005AA96B /* BackgroundPlayground */ = {
+		B315A2C21C935137005AA96B /* BLEiOS_Playground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B315A2F01C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlayground" */;
+			buildConfigurationList = B315A2F01C935137005AA96B /* Build configuration list for PBXNativeTarget "BLEiOS_Playground" */;
 			buildPhases = (
 				B315A2BF1C935137005AA96B /* Sources */,
 				B315A2C01C935137005AA96B /* Frameworks */,
@@ -155,14 +129,14 @@
 			);
 			dependencies = (
 			);
-			name = BackgroundPlayground;
+			name = BLEiOS_Playground;
 			productName = BackgroundPlayground;
-			productReference = B315A2C31C935137005AA96B /* BackgroundPlayground.app */;
+			productReference = B315A2C31C935137005AA96B /* BLEiOS_Playground.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B315A2DB1C935137005AA96B /* BackgroundPlaygroundTests */ = {
+		B315A2DB1C935137005AA96B /* BLEiOS_PlaygroundTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B315A2F31C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlaygroundTests" */;
+			buildConfigurationList = B315A2F31C935137005AA96B /* Build configuration list for PBXNativeTarget "BLEiOS_PlaygroundTests" */;
 			buildPhases = (
 				B315A2D81C935137005AA96B /* Sources */,
 				B315A2D91C935137005AA96B /* Frameworks */,
@@ -173,14 +147,14 @@
 			dependencies = (
 				B315A2DE1C935137005AA96B /* PBXTargetDependency */,
 			);
-			name = BackgroundPlaygroundTests;
+			name = BLEiOS_PlaygroundTests;
 			productName = BackgroundPlaygroundTests;
-			productReference = B315A2DC1C935137005AA96B /* BackgroundPlaygroundTests.xctest */;
+			productReference = B315A2DC1C935137005AA96B /* BLEiOS_Playground.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B315A2E61C935137005AA96B /* BackgroundPlaygroundUITests */ = {
+		B315A2E61C935137005AA96B /* BLEiOS_PlaygroundUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B315A2F61C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlaygroundUITests" */;
+			buildConfigurationList = B315A2F61C935137005AA96B /* Build configuration list for PBXNativeTarget "BLEiOS_PlaygroundUITests" */;
 			buildPhases = (
 				B315A2E31C935137005AA96B /* Sources */,
 				B315A2E41C935137005AA96B /* Frameworks */,
@@ -191,9 +165,9 @@
 			dependencies = (
 				B315A2E91C935137005AA96B /* PBXTargetDependency */,
 			);
-			name = BackgroundPlaygroundUITests;
+			name = BLEiOS_PlaygroundUITests;
 			productName = BackgroundPlaygroundUITests;
-			productReference = B315A2E71C935137005AA96B /* BackgroundPlaygroundUITests.xctest */;
+			productReference = B315A2E71C935137005AA96B /* BLEiOS_Playground.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B315A2BE1C935137005AA96B /* Build configuration list for PBXProject "BackgroundPlayground" */;
+			buildConfigurationList = B315A2BE1C935137005AA96B /* Build configuration list for PBXProject "BLEiOS_Playground" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,9 +205,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B315A2C21C935137005AA96B /* BackgroundPlayground */,
-				B315A2DB1C935137005AA96B /* BackgroundPlaygroundTests */,
-				B315A2E61C935137005AA96B /* BackgroundPlaygroundUITests */,
+				B315A2C21C935137005AA96B /* BLEiOS_Playground */,
+				B315A2DB1C935137005AA96B /* BLEiOS_PlaygroundTests */,
+				B315A2E61C935137005AA96B /* BLEiOS_PlaygroundUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B315A2E11C935137005AA96B /* BackgroundPlaygroundTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B315A2EC1C935137005AA96B /* BackgroundPlaygroundUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +269,12 @@
 /* Begin PBXTargetDependency section */
 		B315A2DE1C935137005AA96B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B315A2C21C935137005AA96B /* BackgroundPlayground */;
+			target = B315A2C21C935137005AA96B /* BLEiOS_Playground */;
 			targetProxy = B315A2DD1C935137005AA96B /* PBXContainerItemProxy */;
 		};
 		B315A2E91C935137005AA96B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B315A2C21C935137005AA96B /* BackgroundPlayground */;
+			target = B315A2C21C935137005AA96B /* BLEiOS_Playground */;
 			targetProxy = B315A2E81C935137005AA96B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -411,10 +383,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = BackgroundPlayground/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BLEiOS_Playground/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.softrange.test.BackgroundPlayground;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softrange.test.BLEiOS-Playground";
+				PRODUCT_NAME = BLEiOS_Playground;
 			};
 			name = Debug;
 		};
@@ -422,10 +394,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = BackgroundPlayground/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BLEiOS_Playground/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.softrange.test.BackgroundPlayground;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softrange.test.BLEiOS-Playground";
+				PRODUCT_NAME = BLEiOS_Playground;
 			};
 			name = Release;
 		};
@@ -436,8 +408,8 @@
 				INFOPLIST_FILE = BackgroundPlaygroundTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softrange.test.BackgroundPlaygroundTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundPlayground.app/BackgroundPlayground";
+				PRODUCT_NAME = BLEiOS_Playground;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLEiOS_Playground.app/BLEiOS_Playground";
 			};
 			name = Debug;
 		};
@@ -448,8 +420,8 @@
 				INFOPLIST_FILE = BackgroundPlaygroundTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softrange.test.BackgroundPlaygroundTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundPlayground.app/BackgroundPlayground";
+				PRODUCT_NAME = BLEiOS_Playground;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLEiOS_Playground.app/BLEiOS_Playground";
 			};
 			name = Release;
 		};
@@ -459,7 +431,7 @@
 				INFOPLIST_FILE = BackgroundPlaygroundUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softrange.test.BackgroundPlaygroundUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BLEiOS_Playground;
 				TEST_TARGET_NAME = BackgroundPlayground;
 				USES_XCTRUNNER = YES;
 			};
@@ -471,7 +443,7 @@
 				INFOPLIST_FILE = BackgroundPlaygroundUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softrange.test.BackgroundPlaygroundUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BLEiOS_Playground;
 				TEST_TARGET_NAME = BackgroundPlayground;
 				USES_XCTRUNNER = YES;
 			};
@@ -480,7 +452,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B315A2BE1C935137005AA96B /* Build configuration list for PBXProject "BackgroundPlayground" */ = {
+		B315A2BE1C935137005AA96B /* Build configuration list for PBXProject "BLEiOS_Playground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B315A2EE1C935137005AA96B /* Debug */,
@@ -489,29 +461,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B315A2F01C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlayground" */ = {
+		B315A2F01C935137005AA96B /* Build configuration list for PBXNativeTarget "BLEiOS_Playground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B315A2F11C935137005AA96B /* Debug */,
 				B315A2F21C935137005AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		B315A2F31C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlaygroundTests" */ = {
+		B315A2F31C935137005AA96B /* Build configuration list for PBXNativeTarget "BLEiOS_PlaygroundTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B315A2F41C935137005AA96B /* Debug */,
 				B315A2F51C935137005AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		B315A2F61C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlaygroundUITests" */ = {
+		B315A2F61C935137005AA96B /* Build configuration list for PBXNativeTarget "BLEiOS_PlaygroundUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B315A2F71C935137005AA96B /* Debug */,
 				B315A2F81C935137005AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
