@@ -207,6 +207,11 @@
 				TargetAttributes = {
 					B315A2C21C935137005AA96B = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B315A2DB1C935137005AA96B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -496,6 +501,7 @@
 				B315A2F21C935137005AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B315A2F31C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				B315A2F51C935137005AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B315A2F61C935137005AA96B /* Build configuration list for PBXNativeTarget "BackgroundPlaygroundUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +519,7 @@
 				B315A2F81C935137005AA96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

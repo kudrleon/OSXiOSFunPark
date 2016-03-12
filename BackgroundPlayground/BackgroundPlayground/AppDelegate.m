@@ -17,7 +17,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
+                                                       settingsForTypes:UIUserNotificationTypeBadge |
+                                                                        UIUserNotificationTypeSound |
+                                                                        UIUserNotificationTypeAlert
+                                                             categories:nil]];
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    NSLog(@"Received notification: %@", notification.alertBody);
+    [NSTimer scheduledTimerWithTimeInterval: 0.1
+                                     target: self
+                                   selector: @selector(openCustomUrl)
+                                   userInfo: NULL
+                                    repeats: NO];
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"CustomSchemePlayground://note_from_alert"]];
+}
+
+- (void) openCustomUrl {
+    NSLog(@"Fire URL NOW");
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"CustomSchemePlayground://note_from_alert"]];
+}
+
+// Called to tell the delegate the types of local and remote notifications that can be used to get the user’s attention.
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

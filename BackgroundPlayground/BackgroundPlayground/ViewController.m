@@ -141,7 +141,7 @@
 }
 
 #pragma mark - CBCharacteristic helpers
-
+static int count=0;
 // Instance method to get the heart rate BPM information
 - (void) getHeartBPMData:(CBCharacteristic *)characteristic error:(NSError *)error
 {
@@ -161,10 +161,41 @@
     if( (characteristic.value)  || !error ) {   // 4
         self.heartRate = bpm;
         self.heartRateBPM.text = [NSString stringWithFormat:@"%i bpm", bpm];
-        self.heartRateBPM.font = [UIFont fontWithName:@"Futura-CondensedMedium" size:28];
+        count += 1;
+        if( count % 10 == 1 )
+            NSLog(@"Rate: %i bpm (%i)", bpm, count);
+        if (count == 12) {
+            NSLog(@"Firing alarm");
+            [self sendAlarm];
+            NSLog(@"Did fire alarm");
+        }
     }
     return;
 }
+
+- (void)sendAlarm
+{
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray*    oldNotifications = [app scheduledLocalNotifications];
+    // Clear out the old notification before scheduling a new one.
+    if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+    // Create a new notification.
+    UILocalNotification* alarm = [[UILocalNotification alloc] init];
+    alarm.repeatInterval = 0;
+    alarm.alertBody = @"12 measures";
+    alarm.alertAction = @"12M";
+    [app presentLocalNotificationNow:alarm];
+    UIApplicationState applicationState = app.applicationState;
+    if (applicationState == UIApplicationStateBackground) {
+        [app presentLocalNotificationNow:alarm];
+    }
+    else {
+        NSURL *myURL = [NSURL URLWithString:@"CustomSchemePlayground://from_ticker"];
+        [[UIApplication sharedApplication] openURL:myURL];
+    }
+}
+
 // Instance method to get the manufacturer name of the device
 - (void) getManufacturerName:(CBCharacteristic *)characteristic
 {
