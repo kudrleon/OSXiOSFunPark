@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#define CHECK_ADS_DONT_CONNECT YES
+
 @interface ViewController ()
 @end
 
@@ -72,11 +74,24 @@
 {
     NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];
     NSLog(@"Found the heart rate monitor: %@", localName);
-    [self.centralManager stopScan];
+    [self stopScan];
     self.HRMPeripheral = peripheral;
     peripheral.delegate = self;
-    [self.centralManager connectPeripheral:peripheral options:nil];
+    if (CHECK_ADS_DONT_CONNECT)
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(startScan) userInfo:NULL repeats:NO];
+    else
+        [self.centralManager connectPeripheral:peripheral options:nil];
 }
+
+- (void) startScan {
+    [self.centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:BLE_SERVICE_UUID_HEART_RATE],
+                                                          [CBUUID UUIDWithString:BLE_SERVICE_UUID_DEVICE_INFO]] options:nil];
+}
+
+- (void) stopScan {
+    [self.centralManager stopScan];
+}
+
 
 #pragma mark - CBPeripheralDelegate
 
